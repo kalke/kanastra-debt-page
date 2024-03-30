@@ -1,0 +1,43 @@
+{
+  "name": "kanastra-debt-page",
+  "private": true,
+  "version": "1.0.0",
+  "author": "Henrique Kalke <hnrqkalke@gmail.com>",
+  "scripts": {
+    "dev": "concurrently --kill-others \"bun run tailwindcss --watch\" \"vite\"",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "tailwindcss": "tailwindcss -i ./src/global.css -o ./dist/index.css",
+    "build": "tsc && vite build && bun run tailwindcss",
+    "preview": "vite preview",
+    "dev:node": "concurrently \"npx tailwindcss -i ./src/global.css -o ./dist/index.css --watch\" \"vite\"",
+    "build:node": "tsc && vite build && npm run tailwindcss"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.16",
+    "axios": "^1.6.8",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "concurrently": "^8.2.2",
+    "date-fns": "^2.30.0",
+    "date-fns-tz": "^2.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.3",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.2"
+  }
+}
